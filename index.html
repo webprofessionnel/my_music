@@ -10,110 +10,248 @@
   <title>Music Player</title>
 </head>
 
-<body class="container-fluid">
-  <header class="container">
-    <div class="row text-center">
-      <!-- premier col avec deux row -->
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <!-- premier row avec 3 col-->
-        <div class="row mx-auto my-auto p-2">
-          <div class="col-4 p-2 text-start mx-auto">
-            <button type="button" class="btn btn-secondary px-4"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                height="30" fill="currentColor" class="bi bi-arrow-left-circle-fill mx-auto my-auto"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-              </svg></button>
-          </div>
-          <div class="col-4 p-2 my-auto mx-auto">
-            <button type="button" class="btn btn-secondary px-5 px-md-4"><svg xmlns="http://www.w3.org/2000/svg"
-                width="30" height="30" fill="currentColor" class="bi bi-play-circle mx-auto my-auto"
-                viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                <path
-                  d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
-              </svg></button>
-          </div>
-          <div class="col-4 p-2 text-end mx-auto">
-            <button type="button" class="btn btn-secondary px-4"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill mx-auto my-auto"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-              </svg></button>
-          </div>
+<body class="bg-light">
+  <header>
+
+    <div class="card-header fs-2 fw-bolder text-center p-5 mb-5">
+
+      <div class="row d-flex flex-row ">
+        <div class="col-sm-3 col-md-2 col-lg-1 my-auto">
+          <img src="./pictures/logo1.gif" class="img-fluid mw-5" alt="logo1">
         </div>
-        <!-- deuxième row avec 3 col-->
-        <div class="row mx-auto my-auto p-2">
-          <div class="col-3 p-2 text-start mx-auto ">
-            <button type="button" class="btn btn-secondary px-3"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                height="30" fill="currentColor" class="bi bi-volume-down-fill mx-auto my-auto" viewBox="0 0 16 16">
-                <path
-                  d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12V4zm3.025 4a4.486 4.486 0 0 1-1.318 3.182L10 10.475A3.489 3.489 0 0 0 11.025 8 3.49 3.49 0 0 0 10 5.525l.707-.707A4.486 4.486 0 0 1 12.025 8z" />
-              </svg></button>
-
-          </div>
-          <div class="col-6 p-2 my-auto mx-auto">
-            <input type="range" class="form-range" id="customRange1">
-
-          </div>
-          <div class="col-3 p-2 text-end mx-auto">
-            <button type="button" class="btn btn-secondary px-3"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                height="30" fill="currentColor" class="bi bi-volume-up-fill mx-auto my-auto" viewBox="0 0 16 16">
-                <path
-                  d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
-                <path
-                  d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
-                <path
-                  d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
-              </svg></button>
-          </div>
+        <div class="col-sm-6 col-md-8 col-lg-10 my-auto">
+          un site static en utilisant les outils BOOTSTRAP <svg xmlns="http://www.w3.org/2000/svg" width="40"
+            height="40" fill="currentColor" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+            <path
+              d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z" />
+            <path
+              d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z" />
+          </svg>
+        </div>
+        <div class="col-sm-3 col-md-2 col-lg-1 my-auto">
+          <img src="./pictures/logo2.gif" class="img-fluid mw-5" alt="logo2">
         </div>
       </div>
-      <!-- deuxième col avec deux row -->
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <!-- premier row avec 1 col -->
-        <div class="row mx-auto my-auto p-2">
-          <div class="col">
-            <h2>Nom de l'artiste</h2>
+    </div>
+
+  </header>
+  <main>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <!-- premier col avec deux row -->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <!-- premier row avec 3 col-->
+          <div class="row mx-auto my-auto p-2">
+            <div class="col-4 p-2 text-start mx-auto">
+              <button type="button" class="btn btn-secondary px-4"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                  height="30" fill="currentColor" class="bi bi-arrow-left-circle-fill mx-auto my-auto"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                </svg></button>
+            </div>
+            <div class="col-4 p-2 my-auto mx-auto">
+              <button type="button" class="btn btn-secondary px-5 px-md-4"><svg xmlns="http://www.w3.org/2000/svg"
+                  width="30" height="30" fill="currentColor" class="bi bi-play-circle mx-auto my-auto"
+                  viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path
+                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                </svg></button>
+            </div>
+            <div class="col-4 p-2 text-end mx-auto">
+              <button type="button" class="btn btn-secondary px-4"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                  height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill mx-auto my-auto"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg></button>
+            </div>
+          </div>
+          <!-- deuxième row avec 3 col-->
+          <div class="row mx-auto my-auto p-2">
+            <div class="col-3 p-2 text-start mx-auto ">
+              <button type="button" class="btn btn-secondary px-3"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                  height="30" fill="currentColor" class="bi bi-volume-down-fill mx-auto my-auto" viewBox="0 0 16 16">
+                  <path
+                    d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12V4zm3.025 4a4.486 4.486 0 0 1-1.318 3.182L10 10.475A3.489 3.489 0 0 0 11.025 8 3.49 3.49 0 0 0 10 5.525l.707-.707A4.486 4.486 0 0 1 12.025 8z" />
+                </svg></button>
+
+            </div>
+            <div class="col-6 p-2 my-auto mx-auto">
+              <input type="range" class="form-range" id="customRange1">
+
+            </div>
+            <div class="col-3 p-2 text-end mx-auto">
+              <button type="button" class="btn btn-secondary px-3"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                  height="30" fill="currentColor" class="bi bi-volume-up-fill mx-auto my-auto" viewBox="0 0 16 16">
+                  <path
+                    d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+                  <path
+                    d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+                  <path
+                    d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
+                </svg></button>
+            </div>
           </div>
         </div>
-        <!-- deuxième row avec 1 col -->
-        <div class="row mx-auto my-auto p-2">
-          <div class="col">
-            <label for="customRange1" class="form-label">Titre de la chanson</label>
-            <input type="range" class="form-range" id="customRange1">
+        <!-- deuxième col avec deux row -->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <!-- premier row avec 1 col -->
+          <div class="row mx-auto my-auto p-2">
+            <div class="col">
+              <h2>Nom de l'artiste</h2>
+            </div>
+          </div>
+          <!-- deuxième row avec 1 col -->
+          <div class="row mx-auto my-auto p-2">
+            <div class="col">
+              <label for="customRange1" class="form-label">Titre de la chanson</label>
+              <input type="range" class="form-range" id="customRange1">
+            </div>
           </div>
         </div>
-      </div>
-      <!-- troisième col avec 1 row -->
-      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-        <div class="row mx-auto my-auto p-2">
-          <div class="col">
-            <nav class="navbar">
-              <form class="container-fluid">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                      height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg></span>
-                  <input type="text" class="form-control" placeholder="search" aria-label="search"
-                    aria-describedby="basic-addon1">
-                </div>
-              </form>
-            </nav>
+        <!-- troisième col avec 1 row -->
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+          <div class="row mx-auto my-auto p-2">
+            <div class="col">
+              <nav class="navbar">
+                <form class="container-fluid">
+                  <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                        height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                      </svg></span>
+                    <input type="text" class="form-control" placeholder="search" aria-label="search"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </form>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </header>
-  <main>
 
+    <div class="container-fluid">
+      <div class="row ">
+        <!-- un row avec deux col -->
+        <div class="col-12 col-sm-12 col-md-4">
+          <!-- premier col -->
+          <div class="row mt-5">
+            <div class="list-group col-lg-6 mx-auto">
+              <a href="#" class="list-group-item list-group-item-action list-group-item-dark fs-3">Music</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-dark fs-3">Videos</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-dark fs-3">Podcasts</a>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-8 mx-auto">
+              <img src="./pictures/music.gif" class="img-fluid" alt="gif">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8">
+          <!-- deuxième col -->
+          <div class="row d-flex justify-content-around">
+            <!-- affichage des card dans differabts ecran  -->
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/1.png" class="card-img-top fluid img-thumbnail" alt="photo1">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/2.png" class="card-img-top fluid img-thumbnail" alt="photo2">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/3.png" class="card-img-top fluid img-thumbnail" alt="photo3">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/4.png" class="card-img-top fluid img-thumbnail" alt="photo4">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/5.png" class="card-img-top fluid img-thumbnail" alt="photo5">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/6.png" class="card-img-top fluid img-thumbnail" alt="photo6">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/7.png" class="card-img-top fluid img-thumbnail" alt="photo7">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/8.png" class="card-img-top fluid img-thumbnail" alt="photo8">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/9.png" class="card-img-top fluid img-thumbnail" alt="photo9">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+            <div class="card col-md-4 col-lg-3 text-center m-3 shadow-sm p-3 mb-5 bg-body rounded">
+              <img src="./pictures/10.png" class="card-img-top fluid img-thumbnail" alt="photo10">
+              <div class="card-body">
+                <h5 class="card-title fs-2 fw-bold">TITRE</h5>
+                <p class="card-text fs-4 fst-italic text-decoration-underline">Un framework CSS: Bootstrap </p>
+                <a href="#" class="btn btn-secondary fs-5 font-monospace">En savoir plus</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
-
+    <div class="card-footer fs-2 fw-bolder text-center p-5"><svg xmlns="http://www.w3.org/2000/svg" width="40"
+        height="40" fill="currentColor" class="bi bi-c-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c.961 0 1.641.633 1.729 1.512h1.295v-.088c-.094-1.518-1.348-2.572-3.03-2.572-2.068 0-3.269 1.377-3.269 3.638v1.073c0 2.267 1.178 3.603 3.27 3.603 1.675 0 2.93-1.02 3.029-2.467v-.093H9.875c-.088.832-.75 1.418-1.729 1.418-1.224 0-1.927-.891-1.927-2.461v-1.06c0-1.583.715-2.503 1.927-2.503Z" />
+      </svg>
+      webprofessionnel
+    </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
